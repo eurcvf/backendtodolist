@@ -58,7 +58,7 @@ public class TaskController {
         var userId = request.getAttribute("userId");
 
         if(!task.getUserId().equals(userId)) {
-            return ResponseEntity.status(400).body("A tarefa informada pertence a outro usuário!");
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("A tarefa informada pertence a outro usuário!");
         } else {
 
         }
